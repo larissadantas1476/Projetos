@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- h1: Cria titulo "Matricula - Escola Online"
+        <form>: Cria um formmulario
+        <fieldset>: Cria um campo com linha
+        <legend>: titulo do grupo criado pelo fieldset
+        <label>: Identifica a iformacao que o usuario deve colocar
+        <input>: Cria campos para o usuario colocar dados
+          type text: Para textos curtos
+          type date: Para informar uma data
+          type tel: Para digitar numeros de telefone
+          type email: Para informar um email
+          type password: Campo para senhas
+          type checkbox: Marca uma ou mais opcoes
+          placeholder: Exibe uma mensagem ou exemplo dentro do campo
+        <select>: Cria uma lista de opcoes
+        <option>: Opcoes disponiveis para escolha
+        <button>: Cria botoes para executar acoes
+            type submit: Para enviar a matricula
+            type reset: Para limpar as informacoes
+        <br>: Quebra de linha
+    -->
+    <h1>Matrícula - Escola Online </h1>
+    <br>
+    <form action="/matricula" method="post">
+       <fieldset>
+        <legend>Dados Pessoais</legend>
+        <label for= "nome">Nome Completo:</label>
+        <input type="text" id="nome" name="nome" required>
+        <br>
+        <p></p>
+        <label for="data">Data de Nascimento:</label>
+        <input type="date" id="data" name="data" required>
+        <br>
+        <p></p>
+        <label for="email">E-mail do Aluno:</label>
+        <input type="email" id="email" name="email" placeholder="aluno@exemplo.com" required>
+        <br>
+        <p></p>
+        <label for="senha">Senha de Acesso:</label>
+        <input type="password" id="senha" name="senha" placeholder="*********" required>
+        <br>
+        <p></p>
+        <label for="telefone">Telefone de Emergência:</label>
+        <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+       </fieldset>
+         <br>
+         <p></p>
+         <fieldset>
+            <legend>Preferências de Estudo:</legend>
+            <br>
+            <p>Áreas de Interesse:</p>
+            <br>
+            <input type="checkbox" id="frontend" name="interesses" value="frontend">
+            <label for="frontend">Front-end</label>
+            <br>
+            <input type="checkbox" id="backend" name="interesses"value="backend">
+            <label for="backend">Back-end</label>
+            <br>
+            <input type="checkbox" id="design" name="interesses" value="design">
+            <label for="design">Design</label>
+            <br>
+            <input type="checkbox" id="dados" name="interesses" value="dados">
+            <label for="dados">Dados</label>
+            <br>
+            <p></p>
+            <label for="conhece">Como conheceu a escola?</label>
+            <select id="conhece" name="conhece" required>
+                <option value="">Seleciona...</option>
+                <option value="indicado">Indicação</option>
+                <option value="internet">Google</option>
+                <option value="redes">Redes Sociais</option>
+            </select>
+         </fieldset>
+            <br>
+            <p></p>
+            <button type="submit">Matricular</button>
+            <button type="reset">Limpar</button>
+    </form>
+</body>
+</html>
